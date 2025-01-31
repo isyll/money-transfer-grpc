@@ -1,5 +1,0 @@
-syntax = "proto3";
-
-message SearchRequest {
-    string query = 1;
-}
