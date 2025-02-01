@@ -1,6 +1,14 @@
 {
   "protoc": {
     "compile_on_save": false,
-    "options": ["--proto_path=pkg/protos", "--go-out=pkg/protos"]
-  }
+    "options": [
+      "--proto_path=${workspaceRoot}/user/v1",
+      "--go_out=gen",
+      "--go-grpc_out=gen"
+    ]
+  },
+  "makefile.configureOnOpen": false,
+  "explorer.compactFolders": true,
+  "go.lintTool": "staticcheck",
+  "go.lintFlags": ["-exclude=internal/tools/tools.go"]
 }
