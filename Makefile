@@ -54,6 +54,10 @@ lint: tidy tools fmt security
 security: 
 	govulncheck ./...
 
+.PHONY: breaking
+breaking:
+	buf breaking --against .git#branch=main
+
 # Test
 
 .PHONY: test
